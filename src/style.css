@@ -1,0 +1,274 @@
+*{
+    margin:0;
+    padding:0;
+}
+body,#Root{
+    height: 100vh;
+}
+#header {
+    margin: 0;
+    padding: 0;
+    height: 12%;
+    width: 100%;
+    background-color: #3399cc;
+    color: white;
+    font-family: 'Century Gothic';
+}
+
+#title {
+    font-size: 100px;
+    align-self:flex-end;
+    margin-left:1%;
+}
+
+#navbar {
+    background-color: black;
+    color: white;
+    height: 5%;
+    font-weight: 600;
+    align-self: center;
+    position: relative;
+}
+
+.navbaritems {
+    align-self: center;
+    display: block;
+    float:left;
+}
+
+li,a{
+    text-decoration:none;
+    color:inherit;
+    font-size:25px;
+}
+ul {
+    list-style-type: none;
+    margin-left: 10px;
+    padding: 0;
+    overflow: hidden;
+    width: inherit;
+    background-color: black;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 9px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: forestgreen;
+}
+#Bing-Icon {
+    float: right;
+   }
+#Bing-Icon>img{
+    height: 30px;
+    width: 30px;
+    margin-top: 10px;
+}
+#container{   
+    height:85%;
+    width:100%;
+    display:flex;
+}
+
+#d1 {
+    width: 100%;
+    height:15%;
+}
+
+#p1{
+    font-size:45px;
+    padding-left:10%;
+    margin-top: 10px;
+    font-weight:600;
+}
+
+#col-30 {
+    height: 100%;
+    width: 25%;
+    box-shadow:initial;
+}
+
+#col-70 {
+    height:100%;
+    float: left;
+    width:75%;
+}
+
+#contactpanel {
+    height: 50%;
+    width: 90%;
+    margin-left: 10%;
+    box-shadow: 0px 0px 0px 1px #0000007d;
+    max-height:100%;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+#contactpanel div:hover{
+    background-color: lightskyblue;
+    cursor:pointer;
+} 
+
+#addForm {
+    flex-flow: wrap;
+    height: 70%;
+    width: 70%;
+    margin-left: 5%;
+    margin-top: 8%;
+    box-shadow: 0px 0px 10px 5px #0000007a;
+}
+
+
+#info{
+    height:70%;
+    margin-top:11.5%;
+    width: 40%;
+    float: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+#homepage{
+    font-size:50px;
+    align-self:center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left:60px;
+}
+
+label{
+    font-size:15px;
+    width:inherit;
+    font-weight:600;
+    display:block;
+}
+
+.form>input {
+    font-size: 25px;
+    margin-bottom:1%;
+    display:block;
+    width: 85%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#address {
+    font-size: 25px;
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 1%;
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+    box-sizing:border-box;
+    padding-top:20px;
+    padding-left:25px;   
+}
+
+.form>div{
+    width:85%;
+    height:54px;
+}
+.form>div>div>input{
+    width:100%;
+    font-size: 25px;
+    margin-bottom:1%;
+}
+.form>div>label
+{
+    width: 100%;
+}
+
+#AddressTxtArea{
+    width: 85%;
+    font-size: 20px;
+    resize: none;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#form-button {
+    background-color: darkgreen;
+    color: white;
+    font-size: 20px;
+    width: 15%;
+    height:7%;
+    float: right;
+    margin-right: 50px;
+    margin-top: 15px;
+}
+
+
+.active {
+    background-color: red;
+}
+
+.contact {
+    box-shadow: 0px 0px 0px 1px #0000007d;
+    height:25%;
+    widows:inherit;
+}
+
+#divname {
+    margin-left: 20px;
+    font-size: 35px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+#divphone {
+    color: grey;
+    font-size: 15px;
+    margin-left: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:200;
+}
+
+#divemail {
+    color: grey;
+    font-size: 15px;
+    margin-left: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+}
+
+#showdata {
+    width: 100%;
+    margin-left: 10%;
+    float: left;
+}
+
+#options{
+    height:80%;
+    margin-left:4%;
+    margin-top:11.5%;
+}
+
+#username{
+    font-size:45px;
+}
+
+span.A , span.B{
+    display:table-cell;
+}
+
+#left{
+    float: left;
+}
+#right{
+    float: right;
+}
+#mobland{
+    height: 54px;
+}
