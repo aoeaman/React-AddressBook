@@ -20,7 +20,7 @@ export default class Container extends React.Component<ContainerProps,ContainerS
         this.Contacts = new Array<User>();
 
         const u1:User =  new User();
-        u1.id="1";u1.Address="";u1.Email="nahibanamail@kahi.pe.bhi";u1.Name="PapaNeNahiRakhaNaam";u1.Landline="GareebiBhotH";u1.Mobile="DostKaNumberDu";u1.Website="www.moogle.com";
+        u1.id="1";u1.Address="Ye Galiyan Ye chaubara Yha Aana Na Doabara Ab hum to bahe pardesi ke tera yha koin nhi";u1.Email="nahibanamail@kahi.pe.bhi";u1.Name="PapaNeNahiRakhaNaam";u1.Landline="GareebiBhotH";u1.Mobile="DostKaNumberDu";u1.Website="www.moogle.com";
         const u2:User =  new User();
         u2.id="2";u2.Address="";u2.Email="nahibanamail@kahi.pe.bhi";u2.Name="PapaNeNahiRakhaNaam";u2.Landline="GareebiBhotH";u2.Mobile="DostKaNumberDu";u2.Website="www.moogle.com";
         this.Contacts.push(u1,u2);
@@ -56,10 +56,8 @@ export default class Container extends React.Component<ContainerProps,ContainerS
                 <ContactPanel Contacts={cloneDeep(this.state.Contacts)}></ContactPanel>
                 <Switch>
                     <Route path='/Add' component={(props)=><UserForm {...props} setContacts={this.setContacts.bind(this)} submitText={"Add"}/>}/>
-                    <Route path="/Edit/:id" render={(props)=><UserForm {...props} setContacts={this.setContacts.bind(this)} submitText={"Update"} getContact={this.getContact.bind(this)}/>}/>
-                    <Route path='/Userinfo/:id' render={(props)=><UserInfo {...props} getContact={this.getContact.bind(this)} deleteContact={this.Delete.bind(this)}/>}/>
-                    }/>
-                    <Route exact path='/'  />
+                    <Route exact path="/Edit/:id" render={(props)=><UserForm {...props} setContacts={this.setContacts.bind(this)} submitText={"Update"} getContact={this.getContact.bind(this)}/>}/>
+                    <Route exact path='/Userinfo/:id' render={(props)=><UserInfo {...props} getContact={this.getContact.bind(this)} deleteContact={this.Delete.bind(this)}/>}/>
                 </Switch>
                 
             </div>

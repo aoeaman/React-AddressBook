@@ -10,7 +10,9 @@ module.exports = {
     extensions: [' ','.ts', '.tsx','.js', '.jsx','.png']
   },
   devServer:{
-    historyApiFallback:true
+    historyApiFallback:true,
+    compress:true,
+    port:9000 
   },
   module: {
     rules: [

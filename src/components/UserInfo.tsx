@@ -2,6 +2,8 @@ import * as React from 'react';
 import ContactDetails from './ContactDetails';
 import User from 'Models/User';
 import { Link } from 'react-router-dom';
+import "../../Public/images/edit1.jpg";
+import "../../Public/images/delete2.png"
 
 type ContainerProps={
     history?:any,

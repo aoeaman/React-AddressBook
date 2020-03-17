@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {Link} from 'react-router-dom';
+import "../../Public/images/bing.png";
 
 export default function NavBar() {
 
