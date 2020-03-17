@@ -1,7 +1,7 @@
 import * as React from "react";
-import Header from "./ts/components/Header";
-import NavBar from "./ts/components/Navbar";
-import Container from "./ts/components/Container";
+import Header from "./components/Header";
+import NavBar from "./components/Navbar";
+import Container from "./components/Container";
 
 import { Router } from "react-router-dom";
 import {createBrowserHistory} from 'history';

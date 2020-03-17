@@ -2,7 +2,7 @@ import * as React from 'react';
 import ContactPanel from "./ContactPanel";
 import { Switch, Route } from 'react-router-dom';
 import UserInfo from './UserInfo';
-import User from './../../Service/User';
+import User from './../Models/User';
 import UserForm from './UserForm';
 import {cloneDeep} from 'lodash';
 
@@ -18,6 +18,7 @@ export default class Container extends React.Component<ContainerProps,ContainerS
     constructor(props:ContainerProps){
         super(props);
         this.Contacts = new Array<User>();
+
         const u1:User =  new User();
         u1.id="1";u1.Address="";u1.Email="nahibanamail@kahi.pe.bhi";u1.Name="PapaNeNahiRakhaNaam";u1.Landline="GareebiBhotH";u1.Mobile="DostKaNumberDu";u1.Website="www.moogle.com";
         const u2:User =  new User();
@@ -31,7 +32,7 @@ export default class Container extends React.Component<ContainerProps,ContainerS
     setContacts(user:User)
     {
         if(user.id==undefined){
-            user.id= this.Contacts.length+1+"";
+            user.id= (this.Contacts.length+1).toString();
             this.Contacts.push(user);
         }
         else{        
@@ -54,7 +55,7 @@ export default class Container extends React.Component<ContainerProps,ContainerS
             <div id='container'>
                 <ContactPanel Contacts={cloneDeep(this.state.Contacts)}></ContactPanel>
                 <Switch>
-                    <Route path='/Add' render={(props)=><UserForm {...props} setContacts={this.setContacts.bind(this)} submitText={"Add"}/>}/>
+                    <Route path='/Add' component={(props)=><UserForm {...props} setContacts={this.setContacts.bind(this)} submitText={"Add"}/>}/>
                     <Route path="/Edit/:id" render={(props)=><UserForm {...props} setContacts={this.setContacts.bind(this)} submitText={"Update"} getContact={this.getContact.bind(this)}/>}/>
                     <Route path='/Userinfo/:id' render={(props)=><UserInfo {...props} getContact={this.getContact.bind(this)} deleteContact={this.Delete.bind(this)}/>}/>
                     }/>

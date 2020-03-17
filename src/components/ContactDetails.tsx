@@ -1,5 +1,5 @@
 import * as React from 'react';
-import User from 'Service/User';
+import User from '../Models/User';
 
 type componentProps={
     user:User;

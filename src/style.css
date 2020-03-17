@@ -41,7 +41,7 @@ li,a{
     color:inherit;
     font-size:25px;
 }
-ul {
+#navbar ul {
     list-style-type: none;
     margin-left: 10px;
     padding: 0;
@@ -50,11 +50,11 @@ ul {
     background-color: black;
 }
 
-li {
+#navbar ul li {
     float: left;
 }
 
-li a {
+#navbar ul li a {
     display: block;
     color: white;
     text-align: center;
@@ -62,7 +62,7 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
+#navbar ul li a:hover {
     background-color: forestgreen;
 }
 #Bing-Icon {
@@ -116,6 +116,9 @@ li a:hover {
 #contactpanel div:hover{
     background-color: lightskyblue;
     cursor:pointer;
+} 
+#contactpanel>div>a>div{
+    height: 25%;
 } 
 
 #addForm {
@@ -210,10 +213,6 @@ label{
 }
 
 
-.active {
-    background-color: red;
-}
-
 .contact {
     box-shadow: 0px 0px 0px 1px #0000007d;
     height:25%;
@@ -271,4 +270,16 @@ span.A , span.B{
 }
 #mobland{
     height: 54px;
+}
+
+.selected{
+    background-color:lightskyblue ;
+}
+
+#contactpanel ul,#contactpanel li,#contactpanel span{
+display: block;
+}
+#contactpanel a{
+    height: 100%;
+    display: block;
 }

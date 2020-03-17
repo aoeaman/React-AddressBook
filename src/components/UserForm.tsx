@@ -1,5 +1,5 @@
 import * as React from 'react';
-import  User  from './../../Service/User';
+import  User  from './../Models/User';
 type UserFormState = {
   user: User
 }
@@ -11,16 +11,14 @@ type UserFormProps = {
 }
 class UserForm extends React.Component<UserFormProps, UserFormState> {
   Contact:User;
-  flag:boolean;
   
   constructor(props) {
     super(props)
+
     let id = this.props.match.params.id;
     this.Contact = id==null?new User():this.props.getContact(id);
-    this.state={user:this.Contact}
-    this.flag=false  
+    this.setState({user:this.Contact}); 
   }
-
 
   handleSubmit(e) {
     e.preventDefault();
@@ -48,15 +46,9 @@ class UserForm extends React.Component<UserFormProps, UserFormState> {
       this.Contact.Address=event.target.value;
     }
   }
-
   render() {
-    
-
-
     return (
       <div id='col-70'>
-            
-
       <div id='addForm'>
         <form className='form'>
           <label>Name *</label>
