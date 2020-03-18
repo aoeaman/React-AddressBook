@@ -71,7 +71,7 @@ export default class Container extends React.Component<ContainerProps,ContainerS
                 <ContactPanel Contacts={(this.state.Contacts)}></ContactPanel>
                 <Switch>
                     <Route path='/Add' component={(props)=><UserForm {...props} setContacts={this.setContacts.bind(this)} submitText={"Add"}/>}/>
-                    <Route path="/Edit/:id" render={(props)=><UserForm {...props} setContacts={this.setContacts.bind(this)} submitText={"Update"} getContact={this.getContact.bind(this)}/>}/>
+                    <Route path="/Edit/:id" component={(props)=><UserForm {...props} setContacts={this.setContacts.bind(this)} submitText={"Update"} getContact={this.getContact.bind(this)}/>}/>
                     <Route path='/Userinfo/:id' component={(props)=><UserInfo {...props} getContact={this.getContact.bind(this)} deleteContact={this.Delete.bind(this)} NextLink={this.Nextlink.bind(this)}/>}/>
                 </Switch>
                 

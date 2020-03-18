@@ -12,18 +12,10 @@ type ContainerProps={
     deleteContact:Function
     NextLink:Function
 }
-type ContainerState={
-    link:string
-}
-export default class UserInfo extends React.Component<ContainerProps,ContainerState>{
+export default class UserInfo extends React.Component<ContainerProps>{
     contact:User;
     constructor(props){
         super(props)
-        this.state={link:''};
-    }
-    componentWillMount(){
-        let id=this.props.match.params.id;
-        this.setState({link:this.props.NextLink(id)})
     }
     render(){
         let id=this.props.match.params.id;
@@ -34,7 +26,7 @@ export default class UserInfo extends React.Component<ContainerProps,ContainerSt
             <ContactDetails user={this.contact}/>
             <div id="options">
                     <Link to={'/Edit/'+id}  ><img className="img" src="../../Public/images/edit1.jpg" /> Edit</Link>
-                    <Link to={this.state.link} onClick={()=>this.props.deleteContact(id)}><img className="img" src="../../Public/images/delete2.png" /> Delete</Link>
+                    <Link to={this.props.NextLink(id)} onClick={()=>this.props.deleteContact(id)}><img className="img" src="../../Public/images/delete2.png" /> Delete</Link>
                 </div> 
             </div>
         );
