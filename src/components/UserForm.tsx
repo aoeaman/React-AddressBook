@@ -11,6 +11,7 @@ type UserFormProps = {
   match?:any,
   getContact?:Function
 }
+
 class UserForm extends React.Component<UserFormProps, UserFormState> {
   Contact:User;
   history: any;
@@ -22,11 +23,8 @@ class UserForm extends React.Component<UserFormProps, UserFormState> {
     this.Contact = id==null?new User():this.props.getContact(id);
     this.state={user:this.Contact}; 
   }
-
-  handleSubmit(e) {
-    e.preventDefault();
-    const { user } = this.state;
-    this.props.setContacts(user);
+  handleSubmit() {
+    this.props.setContacts(this.Contact);
   }
   onInput(event: { target: { name: string; value: string; }; }) {
     const name:string=event.target.name;
@@ -134,7 +132,7 @@ const CancelButton=()=>{
   const history=useHistory();
   return(
     <React.Fragment>
-    <button type="button" id='form-button' onClick={() => history.push('/') }>Cancel</button>
+    <button type="button" id='form-button' onClick={() =>history.push('/') }>Cancel</button>
     </React.Fragment>
   );
 }

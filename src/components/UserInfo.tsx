@@ -10,18 +10,31 @@ type ContainerProps={
     match?:any,
     getContact:Function
     deleteContact:Function
+    NextLink:Function
 }
-export default class UserInfo extends React.Component<ContainerProps>{
+type ContainerState={
+    link:string
+}
+export default class UserInfo extends React.Component<ContainerProps,ContainerState>{
     contact:User;
-
+    constructor(props){
+        super(props)
+        this.state={link:''};
+    }
+    componentWillMount(){
+        let id=this.props.match.params.id;
+        this.setState({link:this.props.NextLink(id)})
+    }
     render(){
         let id=this.props.match.params.id;
+        this.contact=this.props.getContact(id);
         return(
+            
             <div id='col-70'>
-            <ContactDetails user={this.props.getContact(id)}/>
+            <ContactDetails user={this.contact}/>
             <div id="options">
                     <Link to={'/Edit/'+id}  ><img className="img" src="../../Public/images/edit1.jpg" /> Edit</Link>
-                    <Link to='/Delete' onClick={()=>this.props.deleteContact(id)}><img className="img" src="../../Public/images/delete2.png" /> Delete</Link>
+                    <Link to={this.state.link} onClick={()=>this.props.deleteContact(id)}><img className="img" src="../../Public/images/delete2.png" /> Delete</Link>
                 </div> 
             </div>
         );
