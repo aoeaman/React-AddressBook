@@ -104,7 +104,7 @@ li,a{
 }
 
 #contactpanel {
-    max-height: 50%;
+    height: 50%;
     width: 90%;
     margin-left: 10%;
     box-shadow: 0px 0px 0px 1px #0000007d;

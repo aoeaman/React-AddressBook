@@ -1,7 +1,7 @@
 import * as React from 'react';
 import User from '../Models/User';
 
-type componentProps={
+interface componentProps{
     user:User;
 }
 export default class ContactDetails extends React.Component<componentProps>{
