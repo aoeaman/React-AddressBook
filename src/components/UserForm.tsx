@@ -67,7 +67,7 @@ class UserForm extends React.Component<UserFormProps, UserFormState> {
   }
   render() {
     return (
-      <div id='col-70'>
+      <div id='Col-70'>
         <div id='addForm'>
           <form className='form' onSubmit={this.handleSubmit.bind(this)}>
             <label>Name *</label>
@@ -92,7 +92,7 @@ class UserForm extends React.Component<UserFormProps, UserFormState> {
             />
 
             <div id='mobland'>
-              <div id='left'>
+              <div className='left'>
                 <label>Mobile *</label>
                 <input
                   type="text"
@@ -105,7 +105,7 @@ class UserForm extends React.Component<UserFormProps, UserFormState> {
                   required
                 />
               </div>
-              <div id='right'>
+              <div className='right'>
                 <label>Landline</label>
                 <input
                   type="right"

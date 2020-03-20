@@ -91,16 +91,16 @@ li,a{
     font-weight:600;
 }
 
-#col-30 {
+#Col-30 {
     height: 100%;
-    width: 25%;
+    width: 30%;
     box-shadow:initial;
 }
 
-#col-70 {
+#Col-70 {
     height:100%;
     float: left;
-    width:75%;
+    width:70%;
 }
 
 #contactpanel {
@@ -113,7 +113,7 @@ li,a{
     overflow-x:hidden;
 }
 
-#contactpanel div:hover{
+.Contact:hover{
     background-color: lightskyblue;
     cursor:pointer;
 } 
@@ -214,33 +214,25 @@ label{
 }
 
 
-.contact {
+.Contact {
     box-shadow: 0px 0px 0px 1px #0000007d;
     height:25%;
     widows:inherit;
 }
 
-#divname {
+.name {
     margin-left: 20px;
     font-size: 35px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: black;
 }
 
-#divphone {
+.phone,.email {
     color: grey;
     font-size: 15px;
     margin-left: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight:200;
-}
-
-#divemail {
-    color: grey;
-    font-size: 15px;
-    margin-left: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 200;
 }
 
 #showdata {
@@ -263,17 +255,17 @@ span.A , span.B{
     display:table-cell;
 }
 
-#left{
+.left{
     float: left;
 }
-#right{
+.right{
     float: right;
 }
 #mobland{
     height: 60px;
 }
 
-.selected{
+.Selected_Contact{
     background-color:lightskyblue ;
 }
 

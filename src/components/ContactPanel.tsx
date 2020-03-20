@@ -10,12 +10,12 @@ class Contactpanel extends React.Component<ComponentProps>{
         let newArr: Array<User> = this.props.Contacts;
             items.push(newArr.map(e => 
             
-            <li className='contact' key={e.id}>
-                <NavLink to={"/UserInfo/" + e.id} activeClassName="selected"><span id='divname'>{e.Name}</span>
-            <span id='divemail'>{e.Email}</span>
-            <span id='divphone'>{e.Mobile}</span></NavLink></li>));
+            <li className='Contact' key={e.id}>
+                <NavLink to={"/UserInfo/" + e.id} activeClassName="Selected_Contact"><span className='name'>{e.Name}</span>
+            <span className='email'>{e.Email}</span>
+            <span className='phone'>{e.Mobile}</span></NavLink></li>));
         return (
-            <div id="col-30">
+            <div id="Col-30">
                 <div id="d1">
                     <p id="p1">Contacts</p>
                 </div>
